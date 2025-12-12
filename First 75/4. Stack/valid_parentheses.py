@@ -1,7 +1,7 @@
 # pylint: disable=missing-module-docstring, missing-class-docstring
 
 class Solution:
-    def isValid(self, s: str) -> bool:
+    def valid_parentheses(self, s: str) -> bool:
         specialcharsMap = {")":"(", "]":"[","}":"{"}
         acum = []
         for c in s:
@@ -74,7 +74,7 @@ solution = Solution()
 
 for inp, expected in tests:
     try:
-        result = solution.isValid(inp)
+        result = solution.valid_parentheses(inp)
     except Exception as e:
         print(f"❌ ERROR ejecutando s={inp!r}: {e}")
         continue
